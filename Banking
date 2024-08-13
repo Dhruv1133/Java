@@ -1,0 +1,42 @@
+
+class Bankaccount
+{
+    String accountNumber;
+    String accountHolderNumber;
+    double balance;
+    
+    Bankaccount(String an, String ahn, double b){
+        accountNumber = an;
+        accountHolderNumber = ahn;
+        balance = b;
+    }
+    public void deposit(double amt){
+        balance+=amt;
+    }
+    public void withdraw(double amt){
+        if(balance<amt){
+            System.out.println("Insufficient Fund");
+        }
+        else{
+            balance-=amt;
+        }
+    }
+     public void printAccountDetails(){
+        System.out.println("Account Details:-");
+        System.out.println("Account Number: "+ accountNumber);
+        System.out.println("Account Holder Name: "+ accountHolderNumber);
+        System.out.println("Balalnce: "+balance);
+    }
+    
+    public static void main(String[] args) {
+        Bankaccount acc1= new Bankaccount("121212", "Jimmy", 10000);
+        acc1.printAccountDetails();
+        acc1.deposit(100);
+        acc1.withdraw(51);
+        acc1.printAccountDetails();
+        
+    }
+    
+    
+}
+
