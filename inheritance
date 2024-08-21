@@ -1,0 +1,33 @@
+class Shape
+{
+    int dim;
+    Shape()
+    {
+        dim=0;
+    }
+    
+}
+
+class Triangle extends Shape
+{
+    int dim1;
+    Triangle()
+    {
+        dim1=0;
+    }
+    
+    public void display()
+    {
+        System.out.println("Dimension "+dim);
+        System.out.println("Dimension 1 :"+dim1);
+    }
+}
+
+public class MyClass {
+  public static void main(String args[]) {
+
+    Triangle tobj = new Triangle();
+    tobj.display();
+
+  }
+}
